@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Add new Date</h1>
+<div mat-dialog-content>
+  <p>Please enter new Date</p>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [formControl]="date" [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="null">Cancel</button>
+  <button mat-button [mat-dialog-close]="date.value || null" cdkFocusInitial>Add</button>
+</div>

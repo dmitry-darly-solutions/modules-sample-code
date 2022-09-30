@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+app-root .mat-button-base {
+  margin: 8px;
+  border-radius: 0;
+}
+
+.mat-stroked-button .mat-button-wrapper {
+  display: inline-block;
+  min-width: 80px;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+.mat-table .mat-column-view, .mat-table .mat-column-delete {
+  width: 100px;
+  text-align: center;
+}

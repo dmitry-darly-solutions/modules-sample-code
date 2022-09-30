@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Create new contact</h1>
+<div mat-dialog-content>
+  <p>Please enter contact details</p>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>John</mat-label>
+      <input matInput [formControl]="firstName" >
+      <mat-error *ngIf="firstName.hasError('firstName') && !firstName.hasError('required')">
+        First name is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Doe</mat-label>
+      <input matInput [formControl]="lastName" >
+      <mat-error *ngIf="lastName.hasError('lastName') && !lastName.hasError('required')">
+        Last name is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>+111111111111</mat-label>
+      <input matInput [formControl]="phoneNumber" >
+      <mat-error *ngIf="phoneNumber.hasError('phoneNumber') && !phoneNumber.hasError('required')">
+        Last name is required
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="null">Cancel</button>
+  <button mat-button (click)="submit()" [disabled]="firstName.invalid || lastName.invalid ||  phoneNumber.invalid" cdkFocusInitial>Add</button>
+</div>

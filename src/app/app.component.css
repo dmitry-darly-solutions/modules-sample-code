@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav-button-row {
+  border-bottom: 1px solid rgba(63, 81, 181, 0.4);
+}
+
+.app-content {
+  flex-grow: 1;
+}
